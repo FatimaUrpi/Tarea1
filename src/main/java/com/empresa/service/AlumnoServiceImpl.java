@@ -1,0 +1,22 @@
+package com.empresa.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.empresa.entity.Alumno;
+import com.empresa.repository.AlumnoRepository;
+
+@Service
+public class AlumnoServiceImpl implements AlumnoService {
+
+	@Autowired
+	private AlumnoRepository repository;
+	/*Sobre escritura:Metro padre cambio*/
+	@Override
+	public Alumno insertAlumno(Alumno obj) {
+		// TODO Auto-generated method stub
+		return repository.save(obj);
+	}
+	
+
+}
